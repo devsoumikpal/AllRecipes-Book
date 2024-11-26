@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_home" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="90dp"
+        android:rotation="-1"
+        android:layout_marginEnd="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_assest1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="Hello"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/more" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="foodie!"
+        android:textColor="@color/pine_green"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#424242"
+        android:textSize="17sp"
+        android:text="Which indian food would you \nlike to cook ?"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:focusable="false"
+        android:editable="false"
+        android:fontFamily="@font/poppins_light"
+        android:background="@drawable/searchview"
+        android:hint="Search recipe"
+        android:textSize="17sp"
+        android:textColorHint="#5A5858"
+        android:paddingStart="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="7dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search"
+        app:srcCompat="@drawable/search_ic" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="Categories"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/salad"
+                style="@style/my_style"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/category_salad" />
+
+            <TextView
+                android:id="@+id/tvSalad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/salad"
+                android:layout_alignStart="@id/salad"
+                android:layout_alignEnd="@id/salad"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="-23dp"
+                android:text="Salad"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/dish"
+                style="@style/my_style"
+                android:layout_marginStart="17dp"
+                android:layout_toEndOf="@id/salad"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/category_main" />
+
+            <TextView
+                android:id="@+id/tvMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dish"
+                android:layout_alignStart="@id/dish"
+                android:layout_alignEnd="@id/dish"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="-23dp"
+                android:text="Dish"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/drinks"
+                style="@style/my_style"
+                android:layout_marginStart="17dp"
+                android:layout_toEndOf="@id/dish"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/catergory_drinks" />
+
+            <TextView
+                android:id="@+id/tvDrinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drinks"
+                android:layout_alignStart="@+id/drinks"
+                android:layout_alignEnd="@+id/drinks"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="-23dp"
+                android:text="Drinks"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/dessrts"
+                style="@style/my_style"
+                android:layout_marginStart="17dp"
+                android:layout_toEndOf="@id/drinks"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/category_dessert" />
+
+            <TextView
+                android:id="@+id/tvDessart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dessrts"
+                android:layout_alignStart="@+id/dessrts"
+                android:layout_alignEnd="@+id/dessrts"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="-23dp"
+                android:text="Desserts"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Popular recipes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_popular"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:listitem="@layout/popular_rv_items" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
